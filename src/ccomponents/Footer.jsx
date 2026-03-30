@@ -101,17 +101,17 @@ const Footer = () => {
                         <ul className="flex gap-5 text-zinc-400">
                             <li>
                                 <a href="#" className=" bg-base-300 rounded-full p-2 text-slate-900">
-                                    <i class="fa-brands fa-square-instagram"></i>
+                                    <i className="fa-brands fa-square-instagram"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" className="bg-base-300 rounded-full p-2 text-slate-900">
-                                    <i class="fa-brands fa-facebook"></i>      
+                                    <i className="fa-brands fa-facebook"></i>      
                                 </a>
                             </li>
                             <li>
                                 <a href="#" className="bg-base-300 rounded-full p-2 text-slate-900">
-                                    <i class="fa-brands fa-x-twitter"></i>
+                                    <i className="fa-brands fa-x-twitter"></i>
                                 </a>
                             </li>
                             

@@ -1,6 +1,6 @@
 import BannerImage from "../assets/banner.png";
 import newImg from "../assets/new.png"
-// import playImg from "../assets/play.png"
+
 
 
 
@@ -30,12 +30,11 @@ const Banner = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="bg-gradient-to-r from-blue-900 to-purple-600 border-2 border-transparent hover:border-purple-600 transition-all px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-white " >
+                        <button className="bg-linear-to-r from-blue-900 to-purple-600 border-2 border-transparent hover:border-purple-600 transition-all px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-white " >
                             Explore Products
                         </button>
                         <button className="border-2 border-purple-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-purple-800">
-                        {/* <img src={playImg} alt="" /> */}
-                        <span className="text-purple-800"><i class="fa-brands fa-google-play"></i></span>
+                        <span className="text-purple-800"><i className="fa-brands fa-google-play"></i></span>
                             Watch Demo
                         </button>
                     </div>
