@@ -12,7 +12,7 @@ const Banner = () => {
                 {/* Left Content */}
                 <div className="space-y-4">
                     <div className="inline-flex items-center gap-2 bg-purple-500/10   text-purple-600 text-sm font-medium px-5 py-2 rounded-full">
-                        <img src={newImg} alt="" />
+                        <img className="animate-pulse" src={newImg} alt="" />
                         <p>New: AI-Powered Tools Available</p>
                     </div>
 
@@ -33,8 +33,9 @@ const Banner = () => {
                         <button className="bg-gradient-to-r from-blue-900 to-purple-600 border-2 border-transparent hover:border-purple-600 transition-all px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-white " >
                             Explore Products
                         </button>
-                        <button className="border-2 border-purple-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-purple-600">
+                        <button className="border-2 border-purple-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-purple-800">
                         {/* <img src={playImg} alt="" /> */}
+                        <span className="text-purple-800"><i class="fa-brands fa-google-play"></i></span>
                             Watch Demo
                         </button>
                     </div>
@@ -46,7 +47,7 @@ const Banner = () => {
                 <div className="relative flex justify-center lg:justify-end">
                     <div className="relative">
                         <img
-                            className="relative h-130 w-auto object-contain drop-shadow-2xl rounded-3xl animate-pulse"
+                            className="relative h-130 w-auto object-contain drop-shadow-2xl rounded-3xl "
                             src={BannerImage}
                             alt="AI Models Banner"
                         />
