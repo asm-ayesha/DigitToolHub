@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const ToolCard = ({ tool, carts, setCarts }) => {
     const [isBuy, setIsBuy] = useState(false)
 
     const handleBuyClick =()=>{
         setIsBuy(true)
+
+        const isFound = carts.find(item => item.id === item.id)
+        if(isFound){
+            toast.error("Item already in cart")
+            return
+        }
+
         setCarts([...carts,tool])
+        toast("Your item is now in the cart 🎉")
     }
 
     // dynamic tag color

@@ -10,16 +10,17 @@ const ProductCartBtn = ({carts,activeTab, setActiveTab}) => {
 
 
 
-
                 {/* name of each tab group should be unique */}
                 <div className="tabs tabs-box justify-center mx-auto rounded-full w-82 bg-transparent">
 
 
-                    <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Products" checked={activeTab === "products"}
+                    <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 ${activeTab === "products"
+? "bg-linear-to-r from-blue-900 to-purple-600 text-white": "text-graay-600"}`} aria-label="Products" checked={activeTab === "products"}
                     onChange={() => setActiveTab("products")}/>
 
 
-                    <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label={`Cart (${carts.length})`} checked={activeTab === "cart"}
+                    <input type="radio" name="my_tabs_1" className={`tab rounded-full w-40 ${activeTab === "cart"
+? "bg-linear-to-r from-blue-900 to-purple-600 text-white": "text-graay-600"}`} aria-label={`Cart (${carts.length})`} checked={activeTab === "cart"}
                     onChange={() => setActiveTab("cart")}/>
                     
                 </div>

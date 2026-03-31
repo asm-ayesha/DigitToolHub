@@ -1,6 +1,12 @@
+import { useState } from "react";
 import BannerImage from "../assets/banner.png";
 import newImg from "../assets/new.png"
 const Banner = () => {
+    const [activeBannerBtn, setActiveBannerBtn] = useState("explore")
+    const handleBannerBtn =(btn)=>{
+        setActiveBannerBtn(btn)
+    }
+
     return (
         <div className="relative min-h-162.5 flex items-center overflow-hidden ">
             <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10 mt-30">
@@ -25,13 +31,16 @@ const Banner = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="bg-linear-to-r from-blue-900 to-purple-600 border-2 border-transparent hover:border-purple-600 transition-all px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-white " >
+
+                        <button onClick={()=> handleBannerBtn("explore")} className={`transition-all px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 ${activeBannerBtn === "explore" ? " bg-linear-to-r from-blue-900 to-purple-600  text-white  shadow-xl shadow-purple-500/30 border-2 border-transparent": "text-violet-500 border-2 border-purple-600 " }`} >
                             Explore Products
                         </button>
-                        <button className="border-2 border-purple-600 px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-purple-500/30 flex items-center gap-3 group text-purple-800">
-                        <span className="text-purple-800"><i className="fa-brands fa-google-play"></i></span>
+
+                        <button onClick={()=> handleBannerBtn("watch")} className={`transition-all px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 ${activeBannerBtn === "watch" ? " bg-linear-to-r from-blue-900 to-purple-600  text-white  shadow-xl shadow-purple-500/30 border-2 border-transparent": "text-violet-500 border-2 border-purple-600 " }`}>
+                        <span ><i className="fa-brands fa-google-play"></i></span>
                             Watch Demo
                         </button>
+
                     </div>
 
                     

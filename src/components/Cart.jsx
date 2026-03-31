@@ -1,15 +1,18 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const Cart = ({ carts, setCarts }) => {
     const totalPrice = carts.reduce((sum, item) => sum + item.price, 0)
 
     const handlePyment = () => {
         setCarts([])
+        toast.success("Success! Your tools are ready 🚀")
     }
 
     const handleRemove =(item) =>{
         const filterArray = carts.filter(c => c.id !== item.id)
         setCarts(filterArray)
+        toast.error("Oops! That item is gone now 😅")
     }
     return (
         <div className='max-w-7xl mx-auto mt-10 shadow border border-gray-50 p-10 rounded-2xl'>
@@ -29,7 +32,7 @@ const Cart = ({ carts, setCarts }) => {
                                         <p className='text-gray-600'>${item.price}</p>
                                     </div>
                                 </div>
-                                <button onClick={()=> handleRemove(item)} className='text-red-500'>Remove</button>
+                                <button onClick={()=> handleRemove(item)} className='text-red-500 cursor-pointer'>Remove</button>
                             </div>
                         </div>)
                     }
