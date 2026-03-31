@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const ToolCard = ({ tool }) => {
+const ToolCard = ({ tool, carts, setCarts }) => {
+    const [isBuy, setIsBuy] = useState(false)
+
+    const handleBuyClick =()=>{
+        setIsBuy(true)
+        setCarts([...carts,tool])
+    }
 
     // dynamic tag color
     const getTagstyle = (tag) => {
@@ -25,7 +31,7 @@ const ToolCard = ({ tool }) => {
 
     return (
 
-        <div className='shadow-lg rounded-lg border overflow-hidden border-gray-300 '>
+        <div className='shadow-lg rounded-lg border overflow-hidden border-gray-50 transition-all duration-300  hover:-translate-y-2 hover:shadow-2xl'>
             <div className='p-5'>
                 <div className='flex justify-end'>
                     <p className={`text-sm px-3 py-1 rounded-full ${getTagstyle(tool.tag)}`}>{tool.tag}</p>
@@ -52,7 +58,7 @@ const ToolCard = ({ tool }) => {
                     }
 
                 </ul>
-                <button className='btn w-full bg-linear-to-r from-blue-900 to-purple-600 text-white rounded-full mt-5'>Buy Now</button>
+                <button onClick={handleBuyClick} className={`btn w-full  text-white rounded-full mt-5 ${isBuy? "bg-linear-to-r from-green-900 to-green-600": "bg-linear-to-r from-blue-900 to-purple-600"}`}>Buy Now</button>
             </div>
         </div>
 
