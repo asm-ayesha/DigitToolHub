@@ -1,11 +1,20 @@
 
 import './App.css'
-import Banner from './ccomponents/Banner'
-import Footer from './ccomponents/Footer'
-import NavBar from './ccomponents/Navbar'
-import Princing from './ccomponents/Princing'
-import StatsSection from './ccomponents/StatsSection'
-import Steps from './ccomponents/Steps'
+import Banner from './components/Banner'
+import DigiTools from './components/DigiTools'
+import Footer from './components/Footer'
+import NavBar from './components/Navbar'
+import Princing from './components/Princing'
+import StatsSection from './components/StatsSection'
+import Steps from './components/Steps'
+
+
+const getDigiTools = async () =>{
+  const res =await fetch("/digital-tools.json")
+  return res.json()
+}
+
+const digiToolsPromise = getDigiTools()
 
 function App() {
   
@@ -15,7 +24,7 @@ function App() {
       <NavBar></NavBar>
       <Banner></Banner>
       <StatsSection></StatsSection>
-
+      <DigiTools  digiToolsPromise={digiToolsPromise}></DigiTools>
       <Steps></Steps>
       <Princing></Princing>
       <Footer></Footer>

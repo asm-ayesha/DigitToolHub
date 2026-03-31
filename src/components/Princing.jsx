@@ -25,11 +25,11 @@ const [activeCard, setActiveCard] = useState(null)
                     </div>
                     <ul>
                         <li className='flex items-center gap-2'>
-                            <i class="fa-solid fa-check text-green-300"></i>
+                            <i className="fa-solid fa-check text-green-300"></i>
                             <p className='text-gray-400'>Access to 10 free tools</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                            <i class="fa-solid fa-check text-green-300" ></i>
+                            <i className="fa-solid fa-check text-green-300" ></i>
                             <p className='text-gray-400'>Basic templates</p>
                         </li>
                         <li className='flex items-center gap-2'>
@@ -68,7 +68,7 @@ const [activeCard, setActiveCard] = useState(null)
                             <p className='text-gray-400'>Priority support</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                            <i class="fa-solid fa-check text-green-300"></i>
+                            <i className="fa-solid fa-check text-green-300"></i>
                             <p className='text-gray-400'>Unlimited projects</p>
                         </li>
                         <li className='flex items-center gap-2'>
