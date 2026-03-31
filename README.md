@@ -82,9 +82,11 @@
 
 ```
 src/
-├── components/
 ├── assets/
+├── components/
+├── App.css
 ├── App.jsx
+├── index.css
 └── main.jsx
 ```
 
