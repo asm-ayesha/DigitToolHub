@@ -11,7 +11,7 @@ const Banner = () => {
         <div className="relative min-h-162.5 flex items-center overflow-hidden ">
             <div className=" mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10 mt-30">
                 {/* Left Content */}
-                <div className="space-y-4">
+                <div className="space-y-4 text-center lg:text-left">
                     <div className="inline-flex items-center gap-2 bg-purple-500/10   text-purple-600 text-sm font-medium px-5 py-2 rounded-full">
                         <img className="animate-pulse" src={newImg} alt="" />
                         <p>New: AI-Powered Tools Available</p>
@@ -30,7 +30,7 @@ const Banner = () => {
                         software—all in one place. Start creating faster today.
                     </p>
 
-                    <div className="flex flex-wrap gap-4 pt-4">
+                    <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
 
                         <button onClick={()=> handleBannerBtn("explore")} className={`transition-all px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 ${activeBannerBtn === "explore" ? " bg-linear-to-r from-blue-900 to-purple-600  text-white  shadow-xl shadow-purple-500/30 border-2 border-transparent": "text-violet-500 border-2 border-purple-600 " }`} >
                             Explore Products
@@ -47,7 +47,7 @@ const Banner = () => {
                 </div>
 
                 {/* Right Image */}
-                <div className="relative flex justify-center lg:justify-end">
+                <div className="relative flex justify-center px-4 lg:justify-end ">
                     <div className="relative">
                         <img
                             className="relative h-130 w-auto object-contain drop-shadow-2xl rounded-3xl "

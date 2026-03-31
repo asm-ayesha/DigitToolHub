@@ -40,7 +40,7 @@ const ToolCard = ({ tool, carts, setCarts }) => {
 
     return (
 
-        <div className='shadow-lg rounded-lg border overflow-hidden border-gray-50 transition-all duration-300  hover:-translate-y-2 hover:shadow-2xl'>
+        <div className='shadow-lg rounded-lg border overflow-hidden border-gray-50 transition-all duration-300  hover:-translate-y-2 hover:shadow-2xl '>
             <div className='p-5'>
                 <div className='flex justify-end'>
                     <p className={`text-sm px-3 py-1 rounded-full ${getTagstyle(tool.tag)}`}>{tool.tag}</p>
