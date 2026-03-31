@@ -10,6 +10,7 @@ import Princing from './components/Princing'
 import StatsSection from './components/StatsSection'
 import Steps from './components/Steps'
 import ProductsCartBtn from './components/ProductCartBtn'
+import Workflow from './components/Workflow'
 
 
 const getDigiTools = async () =>{
@@ -40,6 +41,7 @@ function App() {
       }
       <Steps></Steps>
       <Princing></Princing>
+      <Workflow></Workflow>
       <Footer></Footer>
       
     </>
