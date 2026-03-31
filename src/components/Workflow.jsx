@@ -12,7 +12,7 @@ const Workflow = () => {
                 <p className='text-violet-400'>Join thousands of professionals who are already using Digitools to work smarter. <br />
                     Start your free trial today.</p>
             </div>
-            <div className='my-8 space-x-4'>
+            <div className='my-8 flex justify-center items-center gap-4'>
                 <button onClick={()=> handleWorkBtn("explore")} className={`btn rounded-full border  ${activeWorkBtn === "explore" ? "bg-white text-violet-600 border-transparent" : " bg-transparent border-violet-400 text-white"}`}>Explore Products</button>
 
                 <button onClick={()=> handleWorkBtn("view")} className={`btn rounded-full border ${activeWorkBtn === "view" ? "bg-white text-violet-600 border-transparent" : " bg-transparent  border-violet-400 text-white"}`}>View Pricing</button>
