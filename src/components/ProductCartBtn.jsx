@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductCartBtn = ({activeTab, setActiveTab}) => {
+const ProductCartBtn = ({carts,activeTab, setActiveTab}) => {
     return (
         <div>
             <div className='text-center mb-10'>
@@ -19,7 +19,7 @@ const ProductCartBtn = ({activeTab, setActiveTab}) => {
                     onChange={() => setActiveTab("products")}/>
 
 
-                    <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Cart" checked={activeTab === "cart"}
+                    <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label={`Cart (${carts.length})`} checked={activeTab === "cart"}
                     onChange={() => setActiveTab("cart")}/>
                     
                 </div>

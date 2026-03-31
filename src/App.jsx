@@ -28,15 +28,15 @@ function App() {
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar carts={carts}></NavBar>
       <Banner></Banner>
       <StatsSection></StatsSection>
-      <ProductsCartBtn activeTab={activeTab} setActiveTab={setActiveTab}></ProductsCartBtn>
+      <ProductsCartBtn carts={carts} activeTab={activeTab} setActiveTab={setActiveTab}></ProductsCartBtn>
      {
        activeTab === "products" ?<DigiTools  digiToolsPromise={digiToolsPromise} carts={carts} setCarts={setCarts}></DigiTools> : null
      }
       {
-        activeTab === "cart" ?<Cart carts={carts}></Cart> : null
+        activeTab === "cart" ?<Cart carts={carts} setCarts={setCarts}></Cart> : null
       }
       <Steps></Steps>
       <Princing></Princing>
